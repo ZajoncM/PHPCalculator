@@ -3,39 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
 </head>
 <body>
-        <form class="calculator">
-
-            <!-- the input -->
-            <input type="text">
-          
-            <!-- the buttons -->
-            <div class="calculator-buttons">
-              <button class="calc-button is-clear">C</button>
-              <button class="calc-button" data-value="&divide;">&divide;</button>
-          
-              <button class="calc-button" data-value="7">7</button>
-              <button class="calc-button" data-value="8">8</button>
-              <button class="calc-button" data-value="9">9</button>
-              <button class="calc-button" data-value="&times;">&times;</button>
-          
-              <button class="calc-button" data-value="4">4</button>
-              <button class="calc-button" data-value="5">5</button>
-              <button class="calc-button" data-value="6">6</button>
-              <button class="calc-button" data-value="&minus;">&minus;</button>
-          
-              <button class="calc-button" data-value="1">1</button>
-              <button class="calc-button" data-value="2">2</button>
-              <button class="calc-button" data-value="3">3</button>
-              <button class="calc-button" data-value="&plus;">&plus;</button>
-          
-              <button class="calc-button is-zero"  data-value="0">0</button>
-              <button type='submit' class="calc-button is-equals">&equals;</button>
-            </div>
-            
+    <div class="container">
+        <form class="w-50 mt-5 mx-auto">
+            <div class="mb-3">
+                <label for="first-number" class="form-label">Liczba 1</label>
+                <input type="number" class="form-control" id="first-number" name="first-number" placeholder="Podaj liczbę">
+              </div>
+              <div class="mb-3">
+                <label for="second-number" class="form-label">Liczba 2</label>
+                <input type="number" class="form-control" id="second-number" name="second-number" placeholder="Podaj liczbę">
+              </div>
+              <div class="row d-flex justify-content-around mb-4">
+                <div class="form-check col-2">
+                    <input class="form-check-input" type="radio" name="operation" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Dodawanie
+                    </label>
+                  </div>
+                  <div class="form-check col-2">
+                    <input class="form-check-input" type="radio" name="operation" id="flexRadioDefault2" >
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Odejmowanie
+                    </label>
+                  </div>
+                  <div class="form-check col-2">
+                    <input class="form-check-input" type="radio" name="operation" id="flexRadioDefault3" >
+                    <label class="form-check-label" for="flexRadioDefault3">
+                      Mnożenie
+                    </label>
+                  </div>
+                  <div class="form-check col-2">
+                    <input class="form-check-input" type="radio" name="operation" id="flexRadioDefault4" >
+                    <label class="form-check-label" for="flexRadioDefault4">
+                      Dzielenie
+                    </label>
+                  </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Wykonaj</button>
         </form>
+    </div>
+       
         
    <script src="./js/index.js"></script>
 </body>
