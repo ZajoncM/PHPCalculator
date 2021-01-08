@@ -11,11 +11,11 @@
         <form class="w-50 mt-5 mx-auto">
             <div class="mb-3">
                 <label for="first-number" class="form-label">Liczba 1</label>
-                <input type="number" class="form-control" id="first-number" value="<?= $calculator->getFirstNumber() ?>" name="first" placeholder="Podaj liczbę">
+                <input type="number" class="form-control" id="first-number" step="0.01" value="<?= $calculator->getFirstNumber() ?>" name="first" placeholder="Podaj liczbę">
               </div>
               <div class="mb-3">
                 <label for="second-number" class="form-label">Liczba 2</label>
-                <input type="number" class="form-control" id="second-number" value="<?= $calculator->getSecondNumber() ?>" name="second" placeholder="Podaj liczbę">
+                <input type="number" class="form-control" id="second-number" step="0.01" value="<?= $calculator->getSecondNumber() ?>" name="second" placeholder="Podaj liczbę">
               </div>
               <div class="row d-flex justify-content-around mb-4">
                 <div class="form-check col-2">
