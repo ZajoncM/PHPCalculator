@@ -14,8 +14,8 @@ try {
 
     $calculator->calculate();
 
-} catch (\Throwable $th) {
-    throw $th;
+} catch (\Exception $th) {
+    echo $th->getMessage();
 }
 
 include_once './views/calculator.php';

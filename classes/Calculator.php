@@ -63,10 +63,13 @@ class Calculator {
                  $this->setResult($this->firstNumber * $this->secondNumber);
                  break;
             case 'division':
-                if($this->secondNumber === 0) {
-                    throw new \Exception('Dzielenie przez 0');
+                if((int)$this->secondNumber === 0) {
+                    throw new \Exception('Nie można dzielić przez 0!!!');
+                    return false;
+                } else {
+                    return $this->setResult($this->firstNumber / $this->secondNumber);
                 }
-                return $this->setResult($this->firstNumber / $this->secondNumber);
+                
             default: return false;
         }
     }
