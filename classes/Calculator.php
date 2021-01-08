@@ -7,22 +7,22 @@ class Calculator {
     /**
    * @var float
    */
-    protected $firstNumber;
+    private $firstNumber;
 
     /**
    * @var float
    */
-    protected $secondNumber;
+    private $secondNumber;
 
     /**
    * @var string
    */
-    protected $operation;
+    private $operation;
 
     /**
    * @var float
    */
-    protected $result;
+    private $result;
 
     public function __construct(float $firstNumber = 0, float $secondNumber = 0,string $operation = '' ) {
         $this->firstNumber = $firstNumber;
