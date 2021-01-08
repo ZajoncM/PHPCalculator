@@ -18,4 +18,4 @@ try {
     echo $th->getMessage();
 }
 
-include_once './views/calculator.php';
+include_once './views/template.php';
