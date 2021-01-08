@@ -46,7 +46,7 @@ class Calculator {
         return $this->result;
     }
 
-    public function setResult(float $result) {
+    private function setResult(float $result) {
         $this->result = $result;
     }
 
