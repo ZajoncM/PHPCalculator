@@ -6,20 +6,16 @@ use \classes\Calculator;
 
 
 try {
+    $calculator = new Calculator(
+        !empty($_GET['first']) ? $_GET['first'] : 0, 
+        !empty($_GET['second']) ? $_GET['second'] : 0, 
+        !empty($_GET['operation']) ? $_GET['operation'] : ''
+    );
 
-    $number = isset($_GET['first']) ? $_GET['first'] : 0;
-    $numberTwo = isset($_GET['second']) ? $_GET['second'] : 0;
-    $operation = isset($_GET['operation']) ? $_GET['operation'] : '';
-
-    $calculator = new Calculator($number, $numberTwo, $operation);
+    $calculator->calculate();
 
 } catch (\Throwable $th) {
-    //throw $th;
+    throw $th;
 }
 
-
-
-
-var_dump($calculator);
-
-include_once './views/calculator.html';
+include_once './views/calculator.php';
